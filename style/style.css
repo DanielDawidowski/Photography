@@ -1,0 +1,105 @@
+:root {
+    --primaryColor: #583EBC;
+    --white: #FFFFFF;
+    --black: #333333;
+    --yellow: #F8F7AB;
+    --grey: #F9F7F2;
+    --fsize-1: 56px;
+    --fsize-2: 72px;
+    --fsize-3: 20px;
+    --boxShadow: inset 0 -3em 3em rgba(0,0,0,0.1), 
+    0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM+Sans";
+    color: var(--black);
+    background: var(--grey);
+}
+
+h1 {
+    font-weight: lighter;
+    font-size: var(--fsize-1);
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+a:hover{
+    color: var(--primaryColor);
+}
+
+p {
+    line-height: 40px;
+    font-size: var(--fsize-3);
+}
+
+ul {
+    list-style: none;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+.main-button {
+    padding: 8px;
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.178);
+    border-radius: 5%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: var(--fsize-3);
+    background-color: var(--primaryColor);
+    border: 1px solid var(--white);
+    transform: scale(1);
+    color: var(--white);
+    width: 170px;
+    height: 48px;
+}
+
+.main-button:hover {
+    background-color: var(--white);
+    color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    transition: all .4s ease-in-out;
+    transform: scale(1.1);
+}
+
+section {
+    padding: 2rem 0; 
+}
+
+/*////////////////////////////// GLOBAL //////////////////////*/
+
+
+
+#hero {
+    height: calc(200vh - 80px);
+    padding: 0 1rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.082), rgba(0, 0, 0, 0.329)), url('/img/hero/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
