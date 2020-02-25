@@ -3,11 +3,11 @@
     --white: #FFFFFF;
     --black: #333333;
     --gold: #FFD7A8;
-    --grey: #F9F7F2;
+    --grey: #F7F7F7;
     --fsize-1: 40px;
     --fsize-2: 56px;
     --fsize-3: 18px;
-    --boxShadow: inset 0 -3em 3em rgba(0,0,0,0.1), 
+    --boxShadow: inset 0 -40em 4em rgba(0,0,0,0.1), 
     0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 
@@ -371,7 +371,7 @@ section {
     
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
     .about-image {
         height: 570px;
         width: 560px;
@@ -649,6 +649,7 @@ section {
     background-color: var(--white);
     box-shadow: var(--boxShadow);
     border-radius: 50%;
+    border: none;
     padding: 1rem;
     margin-left: 3rem;
 }
@@ -696,5 +697,176 @@ section {
 
 /*////////////////////////////// COLLECTION //////////////////////*/
 
+/*////////////////////////////// WORK //////////////////////*/
 
+#work {
+    padding: 0 1rem;
+    background-color: var(--white);
+}
 
+.work-title h3 {
+    text-transform: uppercase;
+    color: rgb(255, 187, 110);
+    font-weight: 700;
+    font-size: var(--fsize-3);
+}
+
+#work .tabs {
+    display: flex;
+}
+
+#work .tabs li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.3;
+    background-color: var(--grey);
+    width: 140px;
+    height: 208px;
+    box-shadow: var(--boxShadow);
+
+}
+
+#work .tabs li.active{
+    opacity: 1;
+    box-shadow: var(--boxShadow);
+    font-weight: bold;
+    background-color: var(--white);
+    border: none;
+}
+
+#work .tabs .active .tab-image{
+    background-color: var(--white);
+}
+
+#work .tabs li .tab-image {
+    background-color: var(--grey);
+    border-radius: 50%;
+    height: 92px;
+    width: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#work .tabs li img {
+    position: relative;
+    width: 68px;
+    height: 46px;
+}
+
+#work .tabs li div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin-top: 0.4rem;
+}
+
+#work .work-process .panel{
+    position: relative;
+    display: none;
+    border: none;
+    padding: 0 10px;
+    border-radius: 7%;
+    margin-top: 2rem;
+    background-color: var(--grey);
+}
+
+#work .work-process .panel.active {
+    display: block;
+}
+
+#work .work-process .panel.active .panel-image h2 {
+    position: absolute;
+    top: 5%;
+    font-weight: 700;
+    font-size: 140px;
+    color: rgb(224, 224, 224);
+}
+
+#work .work-process .panel img {
+    margin: 2rem 0;
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+}
+
+#work .work-process .panel h1 {
+    font-weight: 700;
+}
+
+#work .work-process .panel p {
+    margin: 2rem 0;
+    text-align: justify;
+}
+
+@media (min-width: 1000px) {
+    #work {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        padding: 6rem calc((100vw - 1450px - 0.5rem) / 2 );
+        margin: 0 auto;
+        height: 100vh;
+    }
+
+    .work-title h3 {
+        font-size: var(--fsize-3);
+    }
+
+    .work-title h1 {
+        font-size: var(--fsize-2);
+        font-weight: bolder;
+        margin-bottom: 4rem;
+        position: relative;
+    }
+
+    .work-text .tabs li{
+        margin-right: 2rem;
+    }
+
+    #work .work-process .panel img {
+        margin: 2rem;
+    }
+
+    .work-process .panel {
+        max-width: 600px;
+    }
+
+    .work-title h1::after {
+        position: absolute;
+        content: url('/img/about/Combined\ Shape.svg');
+        left: 60%;
+        top: -35%;
+        z-index: 1;
+    }
+
+    .work-process .panel h1 {
+        font-size: var(--fsize-2);
+    }
+
+    
+    .work-process .panel h1,
+    .work-process .panel p {
+        padding:0 2rem;
+    }
+
+    #work .work-process .panel.active .panel-image {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #work .work-process .panel.active .panel-image h2{
+        position: unset;
+        font-size: calc(var(--fsize-2)*2);
+        padding: 3rem;
+    }
+
+}
+
+/*////////////////////////////// WORK //////////////////////*/

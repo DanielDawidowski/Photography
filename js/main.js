@@ -1,4 +1,4 @@
-// Popup nav
+////// Popup nav
 
 const triggers = document.querySelectorAll('.cool > li');
 const background = document.querySelector('.dropdownBackground');
@@ -34,9 +34,9 @@ function handleLeave() {
 triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
 triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
 
-// Popup nav   
+////// Popup nav   
 
-// // Change Nav 
+// ////// Change Nav 
 // const navChange = document.querySelector('#about');
 // const topOfNav = navChange.offsetTop;
 
@@ -52,4 +52,29 @@ triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave))
 
 // window.addEventListener('scroll', fixNav)        
 
-// // Change Nav 
+// /////// Change Nav 
+
+/////// Tabs
+
+const tabs = document.querySelectorAll('[data-tab-target]');
+const tabContents = document.querySelectorAll('[data-tab-content]');
+
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.tabTarget);
+        tabContents.forEach(tabContent => {
+            tabContent.classList.remove('active')
+        })
+        tabs.forEach(tab => {
+            tab.classList.remove('active')
+        })
+        tab.classList.add('active')
+        target.classList.add('active')
+    })
+})
+
+
+
+/////// Tabs
+
