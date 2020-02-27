@@ -1270,8 +1270,15 @@ section {
 }
 
 @media (min-width: 1000px) { 
+    .image-gallery img {
+        width: 220px;
+        height: 220px;
+    }
+
     .image-gallery {
-    grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0;
     }
 }
 
