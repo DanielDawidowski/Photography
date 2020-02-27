@@ -83,7 +83,7 @@ img {
     background-color: var(--white);
     color: var(--primaryColor);
     border: 2px solid var(--primaryColor);
-    transition: all .4s ease-in-out;
+    transition: all .3s ease-in-out;
     transform: scale(1.1);
 }
 
@@ -700,7 +700,7 @@ section {
 /*////////////////////////////// WORK //////////////////////*/
 
 #work {
-    padding: 0 1rem;
+    padding: 0 1rem 2rem 1rem;
     background-color: var(--white);
 }
 
@@ -770,9 +770,9 @@ section {
     position: relative;
     display: none;
     border: none;
-    padding: 0 10px;
+    padding: 2rem 10px;
     border-radius: 7%;
-    margin-top: 2rem;
+    margin: 2rem 0;
     background-color: var(--grey);
 }
 
@@ -800,7 +800,7 @@ section {
 }
 
 #work .work-process .panel p {
-    margin: 2rem 0;
+    padding: 2rem 0;
     text-align: justify;
 }
 
@@ -831,7 +831,7 @@ section {
     }
 
     #work .work-process .panel img {
-        margin: 2rem;
+        margin: 2rem 0.4rem 0 0;
     }
 
     .work-process .panel {
@@ -848,25 +848,177 @@ section {
 
     .work-process .panel h1 {
         font-size: var(--fsize-2);
+        padding: 0.4rem 2rem 0 2rem;
     }
 
-    
-    .work-process .panel h1,
     .work-process .panel p {
-        padding:0 2rem;
+        padding: 0 2rem 2rem 2rem;
     }
 
     #work .work-process .panel.active .panel-image {
         display: flex;
         justify-content: space-between;
+        max-width: 500px;
     }
 
     #work .work-process .panel.active .panel-image h2{
         position: unset;
         font-size: calc(var(--fsize-2)*2);
-        padding: 3rem;
+        padding: 1rem;
     }
 
 }
 
 /*////////////////////////////// WORK //////////////////////*/
+
+/*////////////////////////////// TESTIMONIALS //////////////////////*/
+
+#testimonials {
+    padding: 0 1rem;
+    margin: 4rem 0;
+    overflow: hidden;
+}
+
+.testimonials-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.testimonials-text h3{
+    text-transform: uppercase;
+    color: rgb(255, 187, 110);
+    font-weight: 700;
+    font-size: var(--fsize-3);
+    padding-bottom: 1rem;
+}
+
+.testimonials-text h1 {
+    font-weight: bolder;
+}
+
+.testimonials-cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.testimonials-card {
+    background-color: var(--white);
+    border-radius: 7%;
+    padding: 3rem 2.4rem;
+    margin: 1rem 0;
+}
+
+.testimonials-card:nth-child(1) {
+    position: relative;
+}
+
+.testimonials-card:nth-child(1)::after {
+    position: absolute;
+    content: url('/img/about/Combined\ Shape.svg');
+    z-index: -1;
+    top: -9%;
+    left: 72%;
+}
+
+.testimonials-card:nth-child(2) {
+    background-color: var(--gold);
+    position: relative;
+}
+
+.testimonials-card:nth-child(2)::after {
+    position: absolute;
+    content: url('/img/about/Combined\ Shape.svg');
+    z-index: -1;
+    top: -9%;
+    left: -11%;
+}
+
+.testimonials-card:nth-child(3) {
+    position: relative;
+}
+
+.testimonials-card:nth-child(3)::after {
+    position: absolute;
+    content: url('/img/about/Combined\ Shape.svg');
+    z-index: -1;
+    top: -9%;
+    left: 72%;
+}
+
+.testimonials-card p {
+    text-align: justify;
+    line-height: 35px;
+}
+
+.testimonials-image {
+    margin: 2rem 0;
+    display: flex;
+}
+
+.testimonials-image div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    margin-left: 1rem;
+}
+
+.testimonials-image div h2 {
+    font-weight: bold;
+}
+
+@media (min-width: 800px) {
+    #testimonials {
+        padding: 6rem calc((100vw - 1250px - 0.5rem) / 2 );
+        margin: 0 auto;
+        height: 100vh;
+    }
+    
+    .testimonials-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .testimonials-card:not(:first-child) {
+        margin-left: 1.5rem;
+    }
+    
+    .testimonials-card:nth-child(1)::after {
+        top: 69%;
+        left: 72%;
+    }
+    
+    .testimonials-card:nth-child(2)::after {
+        top: -9%;
+        left: 90%;
+    }
+    
+    .testimonials-card:nth-child(3)::after {
+        position: absolute;
+        content: '';
+    }
+}
+
+
+/*////////////////////////////// TESTIMONIALS //////////////////////*/
+
+/*////////////////////////////// SLIDER //////////////////////*/
+
+#slider {
+    
+}
+
+
+
+
+
+
+
+
+/*////////////////////////////// SLIDER //////////////////////*/
+
+
