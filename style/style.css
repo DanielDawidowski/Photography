@@ -7,7 +7,7 @@
     --fsize-1: 40px;
     --fsize-2: 56px;
     --fsize-3: 18px;
-    --boxShadow: inset 0 -40em 4em rgba(0,0,0,0.1), 
+    --boxShadow: inset 0 -4em 4em rgba(0,0,0,0.1), 
     0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 
@@ -1007,7 +1007,9 @@ section {
 /*////////////////////////////// TESTIMONIALS //////////////////////*/
 
 /*////////////////////////////// SLIDER //////////////////////*/
-
+#slider-images{
+    padding-bottom: 0;
+}
 
 #slider, .wrap, .slide-content {
     width: 100%;
@@ -1077,7 +1079,7 @@ section {
     display: flex;
 }
 
-.arrow {
+.arrow-slider {
     background-color: var(--white);
     padding: 1rem;
     border-radius: 50%;
@@ -1091,6 +1093,8 @@ section {
 }
 
 @media (min-width: 800px) {
+
+    
     #slider, .wrap, .slide-content {
         height: 100vh;
     }
@@ -1103,34 +1107,151 @@ section {
         font-size: var(--fsize-2);
     }
 
-    .arrow {
-        font-size: var(--fsize-1);
-        padding: 2rem;
+    .arrow-slider {
+        font-size: var(--fsize-3);
+        padding: 1.5rem;
     }
 
-    .arrows {
+    .arrows{
         top: 80%;
-        right: 15%;
+        right: 5%;
         font-size: var(--fsize-3);
         display: flex;
     }
     
-    #arrow-left {
-        transform: rotate(360deg);
-    }
 
     #arrow-right {
-        margin-left: 6rem;
-        transform: rotate(360deg);
+        margin-left: 1rem;
     }
 }
 
-
-
-
-
-
-
 /*////////////////////////////// SLIDER //////////////////////*/
 
+/*////////////////////////////// NEWS //////////////////////*/
+
+#news {
+    padding: 0 1rem;
+    background-color: var(--white);
+    margin: 2rem 0;
+}
+
+.news-text {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.news-text h3 {
+    padding: 2rem 0;
+    text-transform: uppercase;
+    color: rgb(255, 187, 110);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.news-text h1 {
+    font-weight: bolder;
+}
+
+#news .news-articles {
+    position: relative;
+}
+
+.news-articles img {
+    margin-left: 0.9rem;
+}
+
+#news .article {
+    padding: 2rem 3rem;
+    border-radius: 7%;
+    box-shadow: var(--boxShadow);
+    background-color: var(--white);
+}
+
+
+#news .news-articles .article:first-of-type {
+    position: absolute;
+    top: 74%;
+    left: -1%;
+    padding: 2rem 2rem 2rem 3rem;
+    z-index: 1;
+}
+
+#news .news-articles .article:nth-child(3){
+    position: absolute;
+    margin-top: 14rem;
+    box-shadow: unset 2px 1px 1px rgba(41, 40, 40, 0.342);
+}
+
+#news .news-articles .article:nth-child(3)::after {
+    position: absolute;
+    content: url('/img/about/Combined\ Shape.svg');
+    z-index: -1;
+    top: -22%;
+    left: 50%;
+}
+
+#news .news-articles .article:nth-child(4){
+    position: absolute;
+    margin-top: 29rem;
+}
+
+#news .article h2 {
+    font-weight: bolder;
+}
+
+#news .article p {
+    text-align: justify;
+    padding: 0.5rem 0;
+    opacity: 0.8;
+}
+
+@media (min-width: 1000px) {
+    #news {
+        padding: 2rem calc((100vw - 1250px - 0.5rem) / 2 );
+        margin: 0 auto;
+    }
+
+    #news .news-articles {
+        position: unset;
+        height: 55vh;
+        display: grid;
+        grid-template-columns: repeat(16,1fr);
+        grid-template-rows: repeat(12, 1fr);
+        grid-gap: 0.4rem;
+    }
+
+    .news-articles img {
+        width: 100%;
+        grid-column: 2/11;
+        grid-row: 1/13;
+    }
+
+    #news .news-articles .article:first-of-type {
+        position: unset;
+        grid-column: 1/6;
+        grid-row: 7/12;
+    }
+    
+    #news .news-articles .article:nth-child(3){
+        position: unset;
+        margin-top: 0;
+        box-shadow: unset 2px 1px 1px rgba(41, 40, 40, 0.342);
+        grid-column: 12/17;
+        grid-row: 1/7;
+    }
+
+    
+    #news .news-articles .article:nth-child(4) {
+        position: unset;
+        margin-top: 0;
+        grid-column: 12/17;
+        grid-row: 8/13;
+    }
+
+}
+/*////////////////////////////// NEWS //////////////////////*/
 
