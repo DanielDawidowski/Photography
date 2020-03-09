@@ -1086,6 +1086,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 #arrow-right {
@@ -1335,6 +1336,21 @@ section {
 .footer-social i {
     color: white;
 }
+
+@media (min-width: 1000px) { 
+    #footer {
+        padding: 6rem calc((100vw - 1450px - 0.5rem) / 2 );
+        margin: 0 auto;
+        display: flex;
+    }
+
+    #footer .contact {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
 
 
 /*////////////////////////////// FOOTER //////////////////////*/

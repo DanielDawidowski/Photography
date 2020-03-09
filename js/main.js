@@ -6,7 +6,7 @@ const nav = document.querySelector('.main-menu');
 
 function handleEnter() {
     this.classList.add('trigger-enter');
-    setTimeout(() => this.classList.contains('trigger-enter') && this.classList.add('trigger-enter-active'), 100);
+    setTimeout(() => this.classList.contains('trigger-enter') && this.classList.add('trigger-enter-active'), 150);
     background.classList.add('open');
 
     const dropdown = this.querySelector('.dropdown');
@@ -53,6 +53,34 @@ triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave))
 // window.addEventListener('scroll', fixNav)        
 
 // /////// Change Nav 
+
+////////////////// NAV /////////////////////
+
+const header = document.querySelector("header");
+const sectionOne = document.querySelector("section");
+
+const sectionOneOptions = {
+  rootMargin: "-200px 0px 0px 0px"
+};
+
+const sectionOneObserver = new IntersectionObserver(function(
+  entries,
+  sectionOneObserver
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      header.classList.add("nav-change");
+    } else {
+      header.classList.remove("nav-change");
+    }
+  });
+},
+sectionOneOptions);
+
+sectionOneObserver.observe(sectionOne);
+
+////////////////// NAV /////////////////////
+
 
 /////// Tabs
 
