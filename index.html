@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/dce680d80d.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/progress.css">
     <link rel="stylesheet" href="style/style.css">
     <script src="js/main.js" defer></script>
     <title>Photography</title>
@@ -187,7 +188,7 @@
             <h1>Let's make</br> your <span class="afterline">task's</span></h1>
             <p>Distant orb has power to raise and purify our thoughts like a strain of sacred music, or a noble picture, or a passage from the grander poets.</p>
             <div class="service-video">
-              <a href=""><i class="fas fa-play"></i></a>
+              <button><i class="fas fa-play"></i></button>
               <div>
                 <h2>Play video</h2>
                 <h5>2:34</h5>
@@ -451,6 +452,13 @@
           <a href="/"><i class="fab fa-twitter"></i></a>
           <h5>Copyright © 2019. All Rights Reserved.</h5>
         </section>
+        <div id="backdrop"></div>
+        <div class="modal card" id="add-modal">
+            <video controls src="video/gone.mp4" id="video" class="screen" poster="img/poster.png"></video>
+            <div class="modal__actions">
+                <button class="close">Close</button>
+            </div>
+        </div>
     </main>
 </body>
 </html>

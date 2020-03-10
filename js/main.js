@@ -163,3 +163,44 @@ startSlide();
 
 /////// Slider
 
+//////////////// MODAL //////////////////
+
+const addModal = document.getElementById('add-modal');
+const startMenuButton = document.querySelector('.service-video .fa-play');
+const backdrop = document.getElementById('backdrop');
+const closeMenuButton = addModal.querySelector('.close');
+const video = document.getElementById('video');
+
+
+const toggleBackdrop = () => {
+    backdrop.classList.toggle('visible');
+}
+
+const toggleMenuModal = () => {
+    addModal.classList.toggle('visible');
+    toggleBackdrop();
+} 
+
+const backdropClickHandler = () => {
+    toggleMenuModal();
+}
+
+const closeMenuModal = () => {
+    toggleMenuModal()
+}
+
+// Stop video 
+function stopVideo() {
+    video.currentTime = 0;
+    video.pause();
+  }
+
+startMenuButton.addEventListener('click', toggleMenuModal);
+backdrop.addEventListener('click', backdropClickHandler);
+closeMenuButton.addEventListener('click', closeMenuModal);
+backdrop.addEventListener('click', stopVideo);
+closeMenuButton.addEventListener('click', stopVideo);
+
+//////////////// MODAL //////////////////
+
+
