@@ -604,7 +604,7 @@ section {
     }
 
     @keyframes lamp {
-        0%,20% {
+        0%{
           transform: scale(1) translate(-10%, -25%);
         }
         25% {
@@ -697,10 +697,19 @@ section {
 }
 
 .collection-image:hover .white-bg {
+    /* transition: transform 3s linear;
+    transform: translateX(-10%); */
     display: flex;
-    /* transform: translateX(-80px); */
-    transition: all 1s ease-in;
 }
+
+/* @keyframes hoverLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-10%);
+    }
+} */
 
 .collection-image .white-bg h2 {
     width: 200px;
@@ -723,6 +732,158 @@ section {
     border: none;
     padding: 1rem;
     margin-left: 3rem;
+    animation: iconScale 1s infinite linear;
+}
+
+@keyframes iconScale {
+    0%{
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.lightbox .lightbox-items .item .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.lightbox .lightbox-items .item:hover .overlay {
+    transform: scale(0.9);
+    opacity: 1;
+}
+
+
+.lightbox .lightbox-items .item .overlay h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+.lightbox .lightbox-items .item .overlay .fas {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: #000000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.lightbox-big {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    padding:0 10px;
+}
+
+.lightbox-big.open {
+    display: flex;
+}
+
+.lightbox-big .lightbox-img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 700px;
+    padding: 40px 0;
+    cursor: pointer;
+    animation: lightImage .5s ease;
+}
+
+@keyframes lightImage {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.lightbox-big .lightbox-content {
+    position: relative;
+}
+
+.lightbox-big .lightbox-close {
+    position: absolute;
+    z-index: 101;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    top: -5%;
+    text-align: center;
+    line-height: 40px;
+    color: var(--black);
+    cursor: pointer;
+    font-size: 26px;
+    background-color: var(--gold);
+    border-radius: 50%;
+}
+
+.lightbox-big .lightbox-caption {
+    color: var(--gold);
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    z-index: -1;
+}
+
+.lightbox-big .lightbox-controls div{
+    position: absolute;
+    top: 65%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    margin-top: -20px;
+    border-radius: 50%;
+    background-color: var(--gold);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.lightbox-big .lightbox-controls div:hover {
+    background-color: #ffffff;
+}
+
+.lightbox-big .lightbox-controls div.prev {
+    left: 30px;
+}
+
+.lightbox-big .lightbox-controls div.next {
+    right: 30px;
 }
 
 @media (min-width: 800px) {
@@ -763,7 +924,24 @@ section {
         left: -40%;
         top: 85%;
     } 
-}
+
+    .lightbox-big .lightbox-close {
+        top: 0;
+    }
+
+    .lightbox-big .lightbox-content img {
+        width: 900px;
+        height: 700px;
+    }
+
+    .lightbox-big .lightbox-caption {
+        font-size: var(--fsize-1);
+        bottom: -15px;
+    }
+
+    .lightbox-big .lightbox-controls div{
+        top: 50%;
+    }
 
 
 /*////////////////////////////// COLLECTION //////////////////////*/
@@ -871,7 +1049,7 @@ section {
 }
 
 #work .work-process .panel p {
-    padding: 2rem 0;
+    padding: 2rem ;
     text-align: justify;
 }
 
@@ -1485,6 +1663,7 @@ section {
     color: var(--gold);
     font-weight: 700;
     background-color: var(--black);
+    cursor: pointer;
 }
 
 
