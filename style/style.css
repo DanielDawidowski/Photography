@@ -176,7 +176,7 @@ section {
     top: 30%;
 	animation: none;
 	color: transparent;
-	text-shadow: 0px 0px 1px #fff;
+    text-shadow: 0px 0px 1px #fff;
 }
 
 .hero__text h2.frame-5 span {
@@ -1460,7 +1460,7 @@ section {
 
 @media (min-width: 1000px) {
     #news {
-        padding: 0 calc((100vw - 1250px - 0.5rem) / 2 );
+        padding: 6rem calc((100vw - 1250px - 0.5rem) / 2 );
         margin: 0 auto;
     }
 
