@@ -171,6 +171,7 @@ const backdrop = document.getElementById('backdrop');
 const closeMenuButton = addModal.querySelector('.close');
 const video = document.getElementById('video');
 
+// addModal.style.display = "none"
 
 const toggleBackdrop = () => {
     backdrop.classList.toggle('visible');
@@ -225,6 +226,7 @@ for (let i = 0; i<lightboxItems.length; i++){
     })
 }
 
+
 lightBoxContainer.addEventListener("click", (event) => {
     if(event.target !== lightboxImage && event.target !== prevButton && event.target !== nextButton) {
         lightbox()
@@ -261,4 +263,4 @@ const changeImage = () => {
 }
 
 
-//////////////// GALLERY //////////////////
+//////////////// GALLERY ////////////////
